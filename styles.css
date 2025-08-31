@@ -1,0 +1,41 @@
+body{
+  font-family: sans-serif;
+  background:#0f1226;
+  color:#fff;
+  text-align:center;
+  margin:0;
+  padding:20px;
+}
+.card{
+  max-width:500px;
+  margin:auto;
+  background:#1a1d3a;
+  padding:20px;
+  border-radius:15px;
+}
+.avatar{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  margin-bottom:10px;
+}
+.links{
+  display:grid;
+  gap:10px;
+  margin:20px 0;
+}
+.links a{
+  background:#2a2f5a;
+  padding:12px;
+  border-radius:10px;
+  color:#fff;
+  text-decoration:none;
+}
+button{
+  background:#6fd3ff;
+  border:none;
+  padding:10px 15px;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+}
