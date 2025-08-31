@@ -174,13 +174,20 @@
    text-align: center;
 }
     
-   @media (max-width: 480px) {
-  .company,button,site,maps,call,whatsapp {
-    font-size: 13px;   /* smaller font on phones */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; /* still show "..." if it's too long */
+@media (max-width: 480px) {
+  .company,
+  .links a#site,
+  .links a#maps,
+  .links a#call,
+  .links a#whatsapp,
+  .links button {
+    font-size: 13px;        /* smaller font on phones */
+    white-space: nowrap;    /* keep in one line */
+    overflow: hidden;       /* prevent overflow */
+    text-overflow: ellipsis;/* show "..." if too long */
   }
+}
+
 }
     /* Responsive adjustments */
     @media (max-width: 480px) {
@@ -203,7 +210,10 @@
   }
 
 
-
+ @media (max-width: 480px) {
+  .links a#maps {
+    font-size: 13px;   /* smaller text on small screens */
+  }
       
 }
   </style>
