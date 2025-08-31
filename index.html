@@ -181,19 +181,17 @@
 
        
 @media (max-width: 480px) {
-  .company,
   .links a#site,
   .links a#maps,
   .links a#call,
   .links a#whatsapp,
   .links button {
-    font-size: 14px;       /* slightly smaller on phones */
-    white-space: normal;   /* allow text to wrap */
-    overflow: visible;     /* don’t cut text */
-    text-overflow: unset;  /* remove ... */
+    font-size: 14px;        /* smaller font on phones */
+    white-space: nowrap;    /* keep in one line */
+    overflow: hidden;       /* prevent overflow */
+    text-overflow: ellipsis;/* show "..." if too long */
   }
 }
-
 
 }
     /* Responsive adjustments */
