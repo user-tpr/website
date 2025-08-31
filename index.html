@@ -65,7 +65,7 @@
       right: -5px;
       bottom: -5px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #25d366, #128C7E);
+      background: linear-gradient(135deg, #007bff, #128C7E);
       z-index: -1;
     }
     
@@ -77,9 +77,9 @@
     }
     
     .role {
-      font-family: 'Dancing Script', cursive;
+      
       font-size: 22px;
-      color: #128C7E;
+      color: black;
       margin-bottom: 15px;
     }
     
@@ -137,19 +137,31 @@
     }
     
     .links a#maps { 
-      background: #ff5722; 
+      background: #007bff; 
       color: #fff;
     }
     
     .links a#site { 
-      background: #673ab7; 
+      background: #007bff; 
       color: #fff;
     }
     
     .links button { 
-      background: #4caf50; 
-      color: #fff;
-    }
+      background: red; 
+  color: #fff;
+  text-align: center;}
+
+ .company {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  font-weight: bold;
+  white-space: nowrap;      /* Prevent text from wrapping */
+  overflow: hidden;         /* Optional: hide overflow if too long */
+    /* Optional: add "..." if text is too long */
+}
+    
     
     /* Responsive adjustments */
     @media (max-width: 480px) {
@@ -176,7 +188,10 @@
     
     <h1 id="name">Aamir Ullah</h1>
     <p class="role" id="role">Freight Coordinator</p>
-    <p class="bio" id="bio">Expert logistics solutions with a personal touch</p>
+     
+  <p class="company" id="company">ALNAKHUDA LOGISTICS SERVICES</p>
+
+    <p class="bio" id="bio">Go for Quality – We Take Care of the Rest!</p>
     
     <div class="divider"></div>
     
@@ -185,13 +200,13 @@
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
       <a id="call">
-        <i class="fas fa-phone"></i> Call
+        <i class="fas fa-phone"></i> +97337907007
       </a>
       <a id="maps" target="_blank">
-        <i class="fas fa-map-marker-alt"></i> Location
+        <i class="fas fa-map-marker-alt"></i> Hidd, Muharraq Governorate, Bahrain
       </a>
       <a id="site" target="_blank">
-        <i class="fas fa-globe"></i> Website
+        <i class="fas fa-globe"></i> www.alnakhuda.com
       </a>
       <button id="saveContact">
         <i class="fas fa-address-card"></i> Save Contact
@@ -203,7 +218,7 @@
     const SETTINGS = {
       name: "Aamir Ullah",
       role: "Freight Coordinator",
-      bio: "Expert logistics solutions with a personal touch",
+      bio: "Go for Quality – We Take Care of the Rest!",
       phone: "+973 37907007",
       whatsappNumber: "+973 37907007",
       whatsappMessage: "Hello👋",
