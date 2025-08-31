@@ -137,15 +137,11 @@
       color: #fff;
     }
     
-    .links a#maps { 
-  
+.links a#maps {
   background: #007bff;
   color: #fff;
-  white-space: nowrap;      /* keep text on one line */
-  overflow: hidden;         /* prevent overflow */
-  text-overflow: ellipsis;  /* show "..." if too long */
+  white-space: nowrap;  /* one line only */
 }
-    
     
     .links a#site { 
       background: #007bff; 
@@ -192,6 +188,12 @@
         font-size: 20px;
       }
     }
+    
+    @media (max-width: 480px) {
+  .links a#maps {
+    font-size: 14px;   /* smaller text on small screens */
+  }
+}
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
