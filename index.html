@@ -138,9 +138,14 @@
     }
     
     .links a#maps { 
-      background: #007bff; 
-      color: #fff;
-    }
+  
+  background: #007bff;
+  color: #fff;
+  white-space: nowrap;      /* keep text on one line */
+  overflow: hidden;         /* prevent overflow */
+  text-overflow: ellipsis;  /* show "..." if too long */
+}
+    
     
     .links a#site { 
       background: #007bff; 
