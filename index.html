@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modern Business Card</title>
   <style>
-    /* Import fonts */
+/* Import fonts */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400&family=Dancing+Script:wght@500&display=swap');
     
     * {
@@ -13,34 +13,29 @@
       padding: 0;
       box-sizing: border-box;
     }
-
-    html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
     
     body {
       font-family: 'Open Sans', sans-serif;
       text-align: center;
       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      padding: 10px;
+      padding: 20px;
       min-height: 100vh;
       display: flex;
-      justify-content: center;
+      justify-content: center;95
       align-items: center;
       color: #333;
     }
     
     .card {
-  background: #fff;
-  border-radius: 15px;
-  padding: 20px;
-  width: 100%;
-  max-width: 360px;   /* smaller width for phones */
-  margin: auto;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 420px;
+      width: 100%;
+      margin: auto;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
     
     .card:hover {
       transform: translateY(-5px);
@@ -114,7 +109,7 @@
       transition: all 0.3s ease;
       border: none;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 16px;
       width: 100%;
     }
     
@@ -178,26 +173,14 @@
   text-overflow: unset;
    text-align: center;
 }
-
-     @media (max-width: 480px) {
-  .company {
-    font-size: 17px;   /* smaller text on small screens */
+    
+    @media (max-width: 480px) {
+  .company,button,site,maps,call,whatsapp {
+    font-size: 14px;   /* smaller font on phones */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* still show "..." if it's too long */
   }
-
-       
-@media (max-width: 480px) {
-  .links a#site,
-  .links a#maps,
-  .links a#call,
-  .links a#whatsapp,
-  .links button {
-    font-size: 14px;        /* smaller font on phones */
-    white-space: nowrap;    /* keep in one line */
-    overflow: hidden;       /* prevent overflow */
-    text-overflow: ellipsis;/* show "..." if too long */
-  }
-}
-
 }
     /* Responsive adjustments */
     @media (max-width: 480px) {
@@ -214,7 +197,14 @@
       }
     }
     
+    @media (max-width: 480px) {
+  .links a#maps {
+    font-size: 13px;   /* smaller text on small screens */
+  }
 
+
+      
+}
 
  
   </style>
