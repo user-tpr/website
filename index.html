@@ -183,26 +183,35 @@
       }
       
       .h1 {
-        font-size: 15px;
+        font-size: 16px;
       }
       
       .role {
         font-size: 15px;
       
     }
-    
-      
 }
+
 @media (max-width: 480px) {
-  .button,
-  .site,
-  .maps,
-  .call,
-  .whatsapp {
-    font-size: 14px;   /* smaller font on phones */
+  .bio {
+    font-size: 14px;   /* smaller font on small phones */
+    line-height: 1.4;  /* tighter spacing */
+    margin-bottom: 20px; /* adjust spacing */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .links a#site,
+  .links a#maps,
+  .links a#call,
+  .links a#whatsapp,
+  .links button {
+    font-size: 14px;       /* slightly smaller on phones */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; /* still show "..." if it's too long */
+
   }
 }
   @media (max-width: 480px) {
