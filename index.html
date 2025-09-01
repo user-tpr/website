@@ -170,9 +170,9 @@
   color: #2c3e50;
   font-weight: bold;
   /* remove nowrap and ellipsis */
-  white-space: normal;     
-  overflow: visible;
-  text-overflow: unset;
+     white-space: normal;     /* يسمح بالنزول لسطر جديد */
+    text-overflow: unset;    /* يلغي الـ ... */
+    overflow: visible;       /* يعرض النص كامل */
    text-align: center;
 }
     
@@ -208,8 +208,9 @@
   .links a#whatsapp,
   .links button {
     font-size: 13px;       /* slightly smaller on phones */
-    white-space: nowrap;
-    overflow: auto;
+       white-space: normal;     /* يسمح بالنزول لسطر جديد */
+    text-overflow: unset;    /* يلغي الـ ... */
+    overflow: visible;       /* يعرض النص كامل */
     
 
   }
@@ -217,8 +218,9 @@
   @media (max-width: 480px) {
   .company{
     font-size: 16px;   /* smaller font on phones */
-    white-space: nowrap;
-  overflow: auto;
+       white-space: normal;     /* يسمح بالنزول لسطر جديد */
+    text-overflow: unset;    /* يلغي الـ ... */
+    overflow: visible;       /* يعرض النص كامل */
 
   }}
 
