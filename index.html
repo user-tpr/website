@@ -309,17 +309,25 @@ document.getElementById('mail').href = `mailto:${SETTINGS.vcf.email}`;
 
     document.getElementById('saveContact').addEventListener('click', () => {
       const v = SETTINGS.vcf;
-      const vcard = [
-        'BEGIN:VCARD',
-        'VERSION:3.0',
-        `FN:${v.fullName}`,
-        `ORG:${v.org}`,
-        `TITLE:${v.title}`,
-        `TEL;TYPE=CELL:${v.phone}`,
-        `EMAIL;TYPE=INTERNET:${v.email}`,
-        `URL:${v.url}`,
-        'END:VCARD'
-      ].join('\n');
+
+// Split full name into first and last
+const nameParts = v.fullName.trim().split(" ");
+const firstName = nameParts.slice(0, -1).join(" ") || v.fullName; // all except last
+const lastName = nameParts.slice(-1).join(""); // last word
+
+// Build vCard
+const vcard = [
+  'BEGIN:VCARD',
+  'VERSION:3.0',
+  `N:${lastName};${firstName};;;`,   // Last;First;;;
+  `FN:${v.fullName}`,                // Full name
+  `ORG:${v.org}`,
+  `TITLE:${v.title}`,
+  `TEL;TYPE=CELL:${v.phone}`,
+  `EMAIL;TYPE=INTERNET:${v.email}`,
+  `URL:${v.url}`,
+  'END:VCARD'
+].join('\n');
       const blob = new Blob([vcard], { type: 'text/vcard' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
