@@ -43,6 +43,11 @@
       transform: translateY(-5px);
     }
     
+    .links a#mail {
+  background: #007bff; 
+      color: #fff;
+}
+    
     .avatar-container {
       position: relative;
       margin: 0 auto 20px;
@@ -206,6 +211,7 @@
   .links a#maps,
   .links a#call,
   .links a#whatsapp,
+  .links a#mail,
   .links button {
     font-size: 13px;       /* slightly smaller on phones */
        white-space: normal;     /* يسمح بالنزول لسطر جديد */
@@ -251,6 +257,12 @@
       <a id="call">
         <i class="fas fa-phone"></i> +97337907007
       </a>
+      
+       <a id="mail" target="_blank">
+    <i class="fas fa-envelope"></i> aamir@alnakhuda.net
+  </a>
+      
+      
       <a id="maps" target="_blank">
         <i class="fas fa-map-marker-alt"></i> Hidd, Muharraq Governorate, Bahrain
       </a>
@@ -288,7 +300,7 @@
     document.getElementById('name').textContent = SETTINGS.name;
     document.getElementById('role').textContent = SETTINGS.role;
     document.getElementById('bio').textContent = SETTINGS.bio;
-
+document.getElementById('mail').href = `mailto:${SETTINGS.vcf.email}`;
     document.getElementById('whatsapp').href =
       `https://wa.me/${SETTINGS.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(SETTINGS.whatsappMessage)}`;
     document.getElementById('call').href = `tel:${SETTINGS.phone}`;
