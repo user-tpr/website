@@ -14,14 +14,14 @@
       box-sizing: border-box;
     }
     
- body {
+body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   background: linear-gradient(135deg, 
-    #3498db 0%,      /* bright blue */
-    #5dade2 30%,     /* softer sky blue */
-    #f1c40f 70%,     /* bright gold */
-    #f9e79f 100%     /* soft pale gold */
+    #3498db 0%,      /* bright blue (top-left) */
+    #5dade2 40%,     /* softer blue mid */
+    #f1c40f 85%,     /* rich gold */
+    #f9e79f 100%     /* pale gold (bottom-right) */
   );
   padding: 20px;
   min-height: 100vh;
@@ -39,14 +39,15 @@
   width: 100%;
   margin: auto;
   box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-  border: 2px solid #5dade2; /* softer blue border */
+  border: 2px solid #3498db; /* bright blue border */
   transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 35px rgba(0,0,0,0.3);
-}
+} 
+    
     .links a#mail {
   background: #007bff; 
       color: #fff;
