@@ -14,10 +14,15 @@
       box-sizing: border-box;
     }
     
-    body {
+ body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  background: linear-gradient(135deg, #3498db 0%, #f1c40f 100%); /* Bright Blue → Gold */
+  background: linear-gradient(135deg, 
+    #3498db 0%,      /* bright blue */
+    #5dade2 30%,     /* softer sky blue */
+    #f1c40f 70%,     /* bright gold */
+    #f9e79f 100%     /* soft pale gold */
+  );
   padding: 20px;
   min-height: 100vh;
   display: flex;
@@ -27,22 +32,21 @@
 }
 
 .card {
-  background: #fffbea; /* very light gold tone */
+  background: linear-gradient(145deg, #ffffff, #fffbea); /* white → light gold */
   border-radius: 20px;
   padding: 30px;
   max-width: 420px;
   width: 100%;
   margin: auto;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-  border: 2px solid #3498db; /* bright blue border */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  border: 2px solid #5dade2; /* softer blue border */
   transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.3);
 }
-
     .links a#mail {
   background: #007bff; 
       color: #fff;
